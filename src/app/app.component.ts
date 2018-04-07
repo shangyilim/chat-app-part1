@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'my chat app';
+  
+  messages = [];
+  
+  name: string;
+  message: string;
+
+  sendMessage(){
+    const message = {
+      name: this.name,
+      message: this.message
+    };
+
+    this.messages.push(message);
+  }
 }
